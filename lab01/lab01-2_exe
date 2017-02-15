@@ -1,0 +1,85 @@
+SQL> SELECT SSN, LNAME, BDATE, SALARY, DNO
+  2  FROM EMP;
+
+SSN       LNAME           BDATE         SALARY        DNO                       
+--------- --------------- --------- ---------- ----------                       
+123456789 Smith           09-JAN-55      30000          5                       
+333445555 Wong            08-DEC-45      40000          5                       
+999887777 Zelaya          19-JUL-58      25000          4                       
+987654321 Wallace         20-JUN-31      43000          4                       
+666884444 Narayan         15-SEP-52      38000          5                       
+453453453 English         31-JUL-62      25000          5                       
+987987987 Jabbar          29-MAR-59      25000          4                       
+888665555 Borg            10-NOV-27      55000          1                       
+
+8 rows selected.
+
+SQL> COLUMN SALARY FORMAT $99990
+SQL> COLUMN LNAME FORMAT A4
+SQL> COLUMN SSN FORMAT A10
+SQL> SELECT SSN, LNAME, BDATE, SALARY, DNO
+  2  FROM EMP;
+
+SSN        LNAM BDATE      SALARY        DNO                                    
+---------- ---- --------- ------- ----------                                    
+123456789  Smit 09-JAN-55  $30000          5                                    
+           h                                                                    
+                                                                                
+333445555  Wong 08-DEC-45  $40000          5                                    
+999887777  Zela 19-JUL-58  $25000          4                                    
+           ya                                                                   
+                                                                                
+987654321  Wall 20-JUN-31  $43000          4                                    
+           ace                                                                  
+                                                                                
+666884444  Nara 15-SEP-52  $38000          5                                    
+
+SSN        LNAM BDATE      SALARY        DNO                                    
+---------- ---- --------- ------- ----------                                    
+           yan                                                                  
+                                                                                
+453453453  Engl 31-JUL-62  $25000          5                                    
+           ish                                                                  
+                                                                                
+987987987  Jabb 29-MAR-59  $25000          4                                    
+           ar                                                                   
+                                                                                
+888665555  Borg 10-NOV-27  $55000          1                                    
+
+8 rows selected.
+
+SQL> SET WRAP OFF
+SQL> SELECT SSN, LNAME, BDATE, SALARY, DNO
+  2  FROM EMP;
+
+SSN        LNAM BDATE      SALARY        DNO                                    
+---------- ---- --------- ------- ----------                                    
+123456789  Smit 09-JAN-55  $30000          5                                    
+333445555  Wong 08-DEC-45  $40000          5                                    
+999887777  Zela 19-JUL-58  $25000          4                                    
+987654321  Wall 20-JUN-31  $43000          4                                    
+666884444  Nara 15-SEP-52  $38000          5                                    
+453453453  Engl 31-JUL-62  $25000          5                                    
+987987987  Jabb 29-MAR-59  $25000          4                                    
+888665555  Borg 10-NOV-27  $55000          1                                    
+
+8 rows selected.
+
+SQL> COLUMN SSN FORMAT A12
+SQL>  SELECT SSN, LNAME, BDATE, SALARY, DNO
+  2   FROM EMP;
+
+SSN          LNAM BDATE      SALARY        DNO                                  
+------------ ---- --------- ------- ----------                                  
+123456789    Smit 09-JAN-55  $30000          5                                  
+333445555    Wong 08-DEC-45  $40000          5                                  
+999887777    Zela 19-JUL-58  $25000          4                                  
+987654321    Wall 20-JUN-31  $43000          4                                  
+666884444    Nara 15-SEP-52  $38000          5                                  
+453453453    Engl 31-JUL-62  $25000          5                                  
+987987987    Jabb 29-MAR-59  $25000          4                                  
+888665555    Borg 10-NOV-27  $55000          1                                  
+
+8 rows selected.
+
+SQL> spool off
