@@ -1,0 +1,87 @@
+SQL> SELECT SSN, LNAME, BDATE, SALARY, DNO
+  2  FROM EMP;
+
+SSN       LNAME           BDATE         SALARY        DNO                       
+--------- --------------- --------- ---------- ----------                       
+123456789 Smith           09-JAN-55      30000          5                       
+333445555 Wong            08-DEC-45      40000          5                       
+999887777 Zelaya          19-JUL-58      25000          4                       
+987654321 Wallace         20-JUN-31      43000          4                       
+666884444 Narayan         15-SEP-52      38000          5                       
+453453453 English         31-JUL-62      25000          5                       
+987987987 Jabbar          29-MAR-59      25000          4                       
+888665555 Borg            10-NOV-27      55000          1                       
+
+8 rows selected.
+
+SQL> COLUMN LNAME HEADING 'Employee name';
+SQL> COLUMN BDATE HEADING 'Birthday';
+SQL> COLUMN SALARY HEADING 'Salary';
+SQL> COLUMN DNO HEADING 'Department Name';
+SQL> SELECT SSN, LNAME, BDATE, SALARY, DNO
+  2  FROM EMP;
+
+SSN       Employee name   Birthday      Salary Department Name                  
+--------- --------------- --------- ---------- ---------------                  
+123456789 Smith           09-JAN-55      30000               5                  
+333445555 Wong            08-DEC-45      40000               5                  
+999887777 Zelaya          19-JUL-58      25000               4                  
+987654321 Wallace         20-JUN-31      43000               4                  
+666884444 Narayan         15-SEP-52      38000               5                  
+453453453 English         31-JUL-62      25000               5                  
+987987987 Jabbar          29-MAR-59      25000               4                  
+888665555 Borg            10-NOV-27      55000               1                  
+
+8 rows selected.
+
+SQL> DESCRIBE EMP
+ Name                                      Null?    Type
+ ----------------------------------------- -------- ----------------------------
+ FNAME                                     NOT NULL VARCHAR2(15)
+ MINIT                                              CHAR(1)
+ LNAME                                     NOT NULL VARCHAR2(15)
+ SSN                                       NOT NULL CHAR(9)
+ BDATE                                              DATE
+ ADDRESS                                            VARCHAR2(30)
+ SEX                                                CHAR(1)
+ SALARY                                             NUMBER(10,2)
+ SUPERSSN                                           CHAR(9)
+ DNO                                       NOT NULL NUMBER(38)
+
+SQL> COLUMN SALARY FORMAT $99,990.9
+SQL> SELECT SSN, LNAME, BDATE, SALARY, DNO
+  2  FROM EMP
+  3  ;
+
+SSN       Employee name   Birthday      Salary Department Name                  
+--------- --------------- --------- ---------- ---------------                  
+123456789 Smith           09-JAN-55  $30,000.0               5                  
+333445555 Wong            08-DEC-45  $40,000.0               5                  
+999887777 Zelaya          19-JUL-58  $25,000.0               4                  
+987654321 Wallace         20-JUN-31  $43,000.0               4                  
+666884444 Narayan         15-SEP-52  $38,000.0               5                  
+453453453 English         31-JUL-62  $25,000.0               5                  
+987987987 Jabbar          29-MAR-59  $25,000.0               4                  
+888665555 Borg            10-NOV-27  $55,000.0               1                  
+
+8 rows selected.
+
+SQL> COLUMN LNAME HEADING 'Employee Name';
+SQL> SELECT SSN, LNAME, BDATE, SALARY, DNO
+  2  FROM EMP
+  3  ;
+
+SSN       Employee Name   Birthday      Salary Department Name                  
+--------- --------------- --------- ---------- ---------------                  
+123456789 Smith           09-JAN-55  $30,000.0               5                  
+333445555 Wong            08-DEC-45  $40,000.0               5                  
+999887777 Zelaya          19-JUL-58  $25,000.0               4                  
+987654321 Wallace         20-JUN-31  $43,000.0               4                  
+666884444 Narayan         15-SEP-52  $38,000.0               5                  
+453453453 English         31-JUL-62  $25,000.0               5                  
+987987987 Jabbar          29-MAR-59  $25,000.0               4                  
+888665555 Borg            10-NOV-27  $55,000.0               1                  
+
+8 rows selected.
+
+SQL> spool off
