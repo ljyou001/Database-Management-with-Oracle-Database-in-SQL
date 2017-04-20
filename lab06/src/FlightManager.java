@@ -237,11 +237,7 @@ public class FlightManager
 			for (int i = 0; i < 6; ++i) { // flight table 6 attributes
 				try 
 				{
-					System.out.println(heads[i] + " : " + rs.getString(i + 1)); // attribute
-																				// id
-																				// starts
-																				// with
-																				// 1
+					System.out.println(heads[i] + " : " + rs.getString(i + 1));
 				} 
 				catch (SQLException e) 
 				{
@@ -381,7 +377,6 @@ public class FlightManager
 		{ 
 			e.printStackTrace(); noException = false;
 		}
-
 	}
 	/**
 	 * Insert data into database
