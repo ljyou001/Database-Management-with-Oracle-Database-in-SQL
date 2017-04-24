@@ -1,0 +1,46 @@
+insert into student values (12345671, 'Kurt','M', 'cs', 0);
+insert into student values (12345672, 'rex','M', 'cis', 0);
+insert into student values (12345678, 'Jerry','M', 'math', 0);
+
+insert into book values (123451, 'Harry Potter I', 'jk', 1100, 10);
+insert into book values (123452, 'Harry Potter II', 'jk', 800, 0);
+insert into book values (123456, 'Harry Potter III', 'jk', 800, 20);
+
+insert into orderlist values ( 1011, 'credit card', null,  12345678, to_date('15/3/2017,10:00:00', 'dd/mm/yyyy,hh24:mi:ss'), 0);
+
+insert into orderlist values ( 1012, 'credit card', 23333, 12345678, to_date('15/ 3/2017,10:00:00', 'dd/mm/yyyy,hh24:mi:ss'), 0);
+
+Insert into orderdetail values (123456, 1012, to_date('15/03/2017,10:00:01', 'dd/mm/yyyy,hh24:mi:ss'));
+
+Insert into orderdetail values (123451, 1012, to_date('15/03/2017,10:00:01', 'dd/mm/yyyy,hh24:mi:ss'));
+
+delete from orderdetail where oid = 1012;
+
+delete from orderlist where oid = 1012;
+
+insert into orderlist values ( 1013, 'cash', null,  12345678, to_date('15/3/2017,10:00:00', 'dd/mm/yyyy,hh24:mi:ss'), 0);
+
+Insert into orderdetail values (123456, 1013, to_date('15/03/2017,10:00:01', 'dd/mm/yyyy,hh24:mi:ss'));
+
+Insert into orderdetail values (123451, 1013, to_date('15/03/2017,10:00:01', 'dd/mm/yyyy,hh24:mi:ss'));
+
+Insert into orderdetail values (123456, 1013, null);
+
+Insert into orderdetail values (123451, 1013, null);
+
+delete from orderdetail where oid = 1013;
+
+delete from orderlist where oid = 1013;
+
+Update orderlist set tprice = 0 where oid = 1013;
+
+update student set dislevel = 0 where sid = 12345678;
+
+Select * from student;
+Select * from book;
+Select * from orderlist;
+Select * from orderdetail;
+
+delete from orderdetail where oid = 101;
+
+delete from orderlist where oid = 101;
